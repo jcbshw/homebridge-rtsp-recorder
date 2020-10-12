@@ -1,0 +1,44 @@
+{
+    "pluginAlias": "RTSPRecorder",
+    "pluginType": "accessory",
+    "singular": false,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string",
+          "required": true
+        },
+        "cameraURL": {
+            "title": "Camera RTSP URL",
+            "type": "string",
+            "required": true
+        },
+        "interval": {
+            "title": "Recording Interval",
+            "type": "integer",
+            "default": 60
+        },
+        "directory": {
+            "title": "Recording Directory",
+            "type": "string",
+            "required": true
+        },
+        "cameraName": {
+            "title": "Camera Name",
+            "type": "string"
+        },
+        "directoryFormat": {
+            "title": "Directory Format",
+            "type": "string"
+        },
+        "fileNameFormat": {
+            "title": "Filename Format",
+            "type": "string"
+        }
+      }
+    },
+    "form": null,
+    "display": null
+  }
