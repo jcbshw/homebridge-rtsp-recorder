@@ -3,7 +3,7 @@
 var Service, Characteristic, HomebridgeAPI;
 const PLUGIN_NAME = 'homebridge-rtsp-recorder';
 const PLUGIN_ACCESSORY = 'RTSPRecorder'
-const Recorder = require('node-rtsp-recorder').Recorder
+const Recorder = require('rtsp-video-recorder').Recorder
 
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
@@ -53,13 +53,10 @@ class RTSPSwitch {
     if (value) {
       this.log.info('Recording from ' + this.config.name + ' starting')
       this.rec = null
-      this.rec = new Recorder({
-          url: this.cameraURL,
-          folder: this.directory,
-          name: this.cameraName,
-          timeLimit: this.interval,
-          directoryPathFormat: this.directoryFormat,
-          fileNameFormat: this.fileNameFormat,
+      this.rec = new Recorder(this.cameraURL, this.directory, {
+          title: this.cameraName,
+          segmentTime: this.interval,
+          filePatter: this.fileNameFormat,
       })
       this.rec.startRecording()
     } else if (this.rec != null) {
