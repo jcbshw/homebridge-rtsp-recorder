@@ -27,7 +27,7 @@
     "homebridge"
   ],
   "dependencies": {
-    "rtsp-video-recorder": ">=1.0.0"
+    "rtsp-video-recorder": "latest"
   },
   "devDependencies": {
     "homebridge": "^1.2.2",
