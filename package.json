@@ -1,7 +1,7 @@
 {
   "displayName": "Homebridge RTSP Recorder",
   "name": "homebridge-rtsp-recorder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Record an RTSP stream on your homebridge server",
   "license": "ISC",
   "repository": {
