@@ -58,10 +58,10 @@ class RTSPSwitch {
           segmentTime: this.interval,
           filePatter: this.fileNameFormat,
       })
-      this.rec.startRecording()
+      this.rec.start()
     } else if (this.rec != null) {
         this.log.info('Recording from ' + this.config.name + ' ending')
-        this.rec.stopRecording()
+        this.rec.stop()
         this.rec = null
     }
     callback(null)
